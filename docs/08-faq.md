@@ -36,4 +36,4 @@
 - 公众号：yeying.community@gmail.com
 
 ## 11. 现在加入还能做什么？
-可以参与文档、协议、工具链、应用场景与生态建设，贡献方向详见 `docs/06-contribution.md`。
+可以参与文档、协议、工具链、应用场景与生态建设，贡献方向详见 [`docs/06-contribution.md`](06-contribution.md)。

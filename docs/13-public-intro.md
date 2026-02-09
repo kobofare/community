@@ -30,7 +30,7 @@
 如果你认同“用户数据主权 + 个人智能体”的方向，并希望参与构建下一代数字基础设施，欢迎加入夜莺社区。
 
 ## 下一步
-- 了解详情：`docs/00-overview.md`
-- 产品矩阵：`docs/04-products.md`
-- 常见问题：`docs/08-faq.md`
-- 参与方式：`docs/06-contribution.md`
+- 了解详情：[`docs/00-overview.md`](00-overview.md)
+- 产品矩阵：[`docs/04-products.md`](04-products.md)
+- 常见问题：[`docs/08-faq.md`](08-faq.md)
+- 参与方式：[`docs/06-contribution.md`](06-contribution.md)

@@ -15,8 +15,8 @@
 应用级别配置（YAML/JSON），建议路径：`configs/entitlements/<app_id>.{yaml|json}`。
 
 示例：
-- YAML：`docs/templates/entitlements-config.yaml`
-- JSON：`docs/templates/entitlements-config.json`
+- YAML：[`docs/templates/entitlements-config.yaml`](templates/entitlements-config.yaml)
+- JSON：[`docs/templates/entitlements-config.json`](templates/entitlements-config.json)
 
 核心字段说明：
 - `pricing.unit`：计费单位（request/minute/gb_month 等）
@@ -27,7 +27,7 @@
 - `risk_controls.daily_uc_cap`：日消耗上限
 
 ## 4. 接口规范（建议）
-OpenAPI 草案见 `docs/15-entitlements-openapi.yaml`。
+OpenAPI 草案见 [`docs/15-entitlements-openapi.yaml`](15-entitlements-openapi.yaml)。
 
 ### 4.1 配置接口
 - `GET /apps/{app_id}/entitlements`
@@ -146,10 +146,10 @@ OpenAPI 草案见 `docs/15-entitlements-openapi.yaml`。
   ]
 }
 ```
-其中 `instance` 为 `docs/templates/entitlements-config.json` 序列化后的 JSON 字符串。完整包装示例见 `docs/templates/application-config.entitlements.json`。
+其中 `instance` 为 [`docs/templates/entitlements-config.json`](templates/entitlements-config.json) 序列化后的 JSON 字符串。完整包装示例见 [`docs/templates/application-config.entitlements.json`](templates/application-config.entitlements.json)。
 
 ### 9.3 需要的补充开发（最小改动）
-- 在应用商店服务中新增权益计费接口（参见 `docs/15-entitlements-openapi.yaml`）
+- 在应用商店服务中新增权益计费接口（参见 [`docs/15-entitlements-openapi.yaml`](15-entitlements-openapi.yaml)）
 - 解析 `config` 中 `code=entitlements` 的配置并缓存
 - 在调用计费接口时执行 UC 扣减与幂等校验
 > 若需要强类型配置，可将 `instance` 改为结构化 JSON，并更新 `normalizeApplicationConfig` 的解析逻辑。

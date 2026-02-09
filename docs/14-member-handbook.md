@@ -3,9 +3,9 @@
 > 本手册帮助成员快速了解：社区是什么、在做什么、怎么做、如何参与。
 
 ## 1. 快速了解
-- 社区总览：`docs/00-overview.md`
-- 愿景与原则：`docs/02-vision-principles.md`
-- 路线图：`docs/07-roadmap.md`
+- 社区总览：[`docs/00-overview.md`](00-overview.md)
+- 愿景与原则：[`docs/02-vision-principles.md`](02-vision-principles.md)
+- 路线图：[`docs/07-roadmap.md`](07-roadmap.md)
 
 ## 2. 你可以做什么
 - **开发者**：协议、工具链、插件、应用集成
@@ -20,26 +20,26 @@
 4) 参与评审与共创展示
 
 ## 4. 协作与治理
-- 治理原则与流程：`docs/05-governance.md`
+- 治理原则与流程：[`docs/05-governance.md`](05-governance.md)
 - 提案机制：先讨论后执行，重大事项公开评审
 
 ## 5. 贡献流程（精简）
 - 提交 Issue/提案 → 认领任务 → 提交 PR → 评审合并
-- 贡献计入 CP，详情见 `docs/11-economics.md`
+- 贡献计入 CP，详情见 [`docs/11-economics.md`](11-economics.md)
 
 ## 6. 经济与权益
 - CP：贡献权益（不可转让）
 - UC：使用权益（仅限应用商店内使用）
 - 试用与增长权益：新用户权益包/试用包/成长任务
-详情见 `docs/11-economics.md`
+详情见 [`docs/11-economics.md`](11-economics.md)
 
 ## 7. 产品与技术
-- 产品矩阵：`docs/04-products.md`
-- 技术路线：`docs/03-architecture.md`
+- 产品矩阵：[`docs/04-products.md`](04-products.md)
+- 技术路线：[`docs/03-architecture.md`](03-architecture.md)
 
 ## 8. 重要规范
-- 权益与计费规范：`docs/12-appstore-entitlements.md`
-- 文档缺口清单：`docs/99-doc-gaps.md`
+- 权益与计费规范：[`docs/12-appstore-entitlements.md`](12-appstore-entitlements.md)
+- 文档缺口清单：[`docs/99-doc-gaps.md`](99-doc-gaps.md)
 
 ## 9. 成员行为建议
 - 先文档后实现，确保可复用与可传递

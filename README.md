@@ -25,4 +25,4 @@
 - [`docs/99-doc-gaps.md`](docs/99-doc-gaps.md)：文档补充清单
 
 ## 参与共建
-如需加入或协作，请先阅读 `docs/06-contribution.md`。
+如需加入或协作，请先阅读 [`docs/06-contribution.md`](docs/06-contribution.md)。

@@ -177,7 +177,7 @@ risk_controls:
   "risk_controls": { "daily_uc_cap": 500, "cooldown_minutes": 60, "abnormal_request_threshold": 200 }
 }
 ```
-完整规范见 `docs/12-appstore-entitlements.md`。
+完整规范见 [`docs/12-appstore-entitlements.md`](12-appstore-entitlements.md)。
 
 ### 9.8 试用权益自动发放与核销规则（初版）
 - **发放触发**：注册成功、完成新手任务、邀请激活、运营投放
