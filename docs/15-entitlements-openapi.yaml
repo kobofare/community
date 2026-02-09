@@ -1,0 +1,261 @@
+openapi: 3.0.3
+info:
+  title: Nightingale App Store Entitlements API
+  version: 0.1.0
+  description: |
+    应用商店权益（UC）与计费接口草案。
+servers:
+  - url: https://api.example.com
+paths:
+  /apps/{app_id}/entitlements:
+    get:
+      summary: 获取应用权益配置
+      parameters:
+        - name: app_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EntitlementsConfig'
+    put:
+      summary: 更新应用权益配置
+      parameters:
+        - name: app_id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EntitlementsConfig'
+      responses:
+        '200':
+          description: OK
+  /entitlements/grants:
+    post:
+      summary: 发放权益
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GrantRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GrantResponse'
+  /entitlements/consume:
+    post:
+      summary: 权益消耗（计费）
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConsumeRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConsumeResponse'
+  /entitlements/refund:
+    post:
+      summary: 权益回滚
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RefundRequest'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RefundResponse'
+  /users/{user_id}/entitlements:
+    get:
+      summary: 获取用户权益余额
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserEntitlements'
+components:
+  schemas:
+    EntitlementsConfig:
+      type: object
+      required:
+        - app_id
+        - app_name
+        - currency
+        - pricing
+      properties:
+        app_id:
+          type: string
+        app_name:
+          type: string
+        currency:
+          type: string
+          example: UC
+        pricing:
+          type: object
+          properties:
+            unit:
+              type: string
+              example: request
+            unit_price:
+              type: integer
+              example: 1
+        trial:
+          type: object
+          properties:
+            enabled:
+              type: boolean
+            quota_uc:
+              type: integer
+            expires_in_days:
+              type: integer
+            per_app_only:
+              type: boolean
+        new_user_bundle:
+          type: object
+          properties:
+            enabled:
+              type: boolean
+            quota_uc:
+              type: integer
+            expires_in_days:
+              type: integer
+        consumption_order:
+          type: array
+          items:
+            type: string
+            example: trial
+        risk_controls:
+          type: object
+          properties:
+            daily_uc_cap:
+              type: integer
+            cooldown_minutes:
+              type: integer
+            abnormal_request_threshold:
+              type: integer
+    GrantRequest:
+      type: object
+      required:
+        - user_id
+        - app_id
+        - grant_type
+        - quota_uc
+      properties:
+        user_id:
+          type: string
+        app_id:
+          type: string
+        grant_type:
+          type: string
+          example: trial
+        quota_uc:
+          type: integer
+        expires_in_days:
+          type: integer
+        reason:
+          type: string
+    GrantResponse:
+      type: object
+      properties:
+        grant_id:
+          type: string
+        balance_uc:
+          type: integer
+    ConsumeRequest:
+      type: object
+      required:
+        - user_id
+        - app_id
+        - usage_units
+        - idempotency_key
+      properties:
+        user_id:
+          type: string
+        app_id:
+          type: string
+        usage_units:
+          type: integer
+        idempotency_key:
+          type: string
+        metadata:
+          type: object
+    ConsumeResponse:
+      type: object
+      properties:
+        consumed_uc:
+          type: integer
+        balance_uc:
+          type: integer
+        source:
+          type: string
+          example: trial
+    RefundRequest:
+      type: object
+      required:
+        - user_id
+        - app_id
+        - idempotency_key
+      properties:
+        user_id:
+          type: string
+        app_id:
+          type: string
+        idempotency_key:
+          type: string
+        delta_uc:
+          type: integer
+        reason:
+          type: string
+    RefundResponse:
+      type: object
+      properties:
+        balance_uc:
+          type: integer
+    UserEntitlements:
+      type: object
+      properties:
+        user_id:
+          type: string
+        balances:
+          type: array
+          items:
+            type: object
+            properties:
+              app_id:
+                type: string
+              balance_uc:
+                type: integer
+              expires_at:
+                type: string
+                format: date-time

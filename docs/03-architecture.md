@@ -41,3 +41,38 @@
 - **可验证**：规则与行为可审计、可追踪
 - **可组合**：不同层级可独立演进，接口可复用
 - **安全优先**：敏感数据最小暴露，默认保护
+
+## 身份与授权标准（建议）
+- **身份**：支持 DID/VC 或等效身份体系，确保可迁移与可验证
+- **授权**：以 UCAN/能力令牌为优先方案，兼容 OAuth2/Token
+- **审计**：授权行为必须可追溯并可撤销
+
+## 数据目录最小结构（示例）
+```json
+{
+  "data_wallet_id": "dw_123",
+  "owner_did": "did:web:example.com",
+  "datasets": [
+    {
+      "dataset_id": "ds_profile",
+      "name": "profile",
+      "schema": "v1",
+      "scope": "private",
+      "created_at": "2026-02-09"
+    }
+  ]
+}
+```
+
+## 授权记录最小结构（示例）
+```json
+{
+  "consent_id": "consent_001",
+  "owner_did": "did:web:example.com",
+  "app_id": "knowledge",
+  "resource": "profile",
+  "action": ["read"],
+  "expires_at": "2026-03-09",
+  "revocable": true
+}
+```

@@ -1,0 +1,24 @@
+app_id: knowledge
+app_name: 知识库
+currency: UC
+pricing:
+  unit: request
+  unit_price: 1
+trial:
+  enabled: true
+  quota_uc: 50
+  expires_in_days: 14
+  per_app_only: true
+new_user_bundle:
+  enabled: true
+  quota_uc: 50
+  expires_in_days: 7
+consumption_order:
+  - trial
+  - new_user_bundle
+  - campaign
+  - purchased
+risk_controls:
+  daily_uc_cap: 500
+  cooldown_minutes: 60
+  abnormal_request_threshold: 200

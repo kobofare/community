@@ -1,0 +1,8 @@
+{
+  "config": [
+    {
+      "code": "entitlements",
+      "instance": "{...JSON 配置字符串...}"
+    }
+  ]
+}
