@@ -22,6 +22,9 @@
 - [`docs/13-public-intro.md`](docs/13-public-intro.md)：对外介绍（公开版）
 - [`docs/14-member-handbook.md`](docs/14-member-handbook.md)：成员手册（协作版）
 - [`docs/15-entitlements-openapi.yaml`](docs/15-entitlements-openapi.yaml)：权益接口 OpenAPI 草案
+- [`docs/16-roles.md`](docs/16-roles.md)：角色体系与协作分工
+- [`docs/17-market-cases.md`](docs/17-market-cases.md)：市场参考案例与建议
+- [`docs/18-diy-superapp-case.md`](docs/18-diy-superapp-case.md)：DIY 超级 APP 案例
 - [`docs/99-doc-gaps.md`](docs/99-doc-gaps.md)：文档补充清单
 
 ## 参与共建

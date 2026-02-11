@@ -11,6 +11,8 @@
 - [`docs/08-faq.md`](08-faq.md)：常见问题
 - [`docs/10-origin.md`](10-origin.md)：社区起源与命名
 - [`docs/13-public-intro.md`](13-public-intro.md)：对外介绍（公开版）
+- [`docs/17-market-cases.md`](17-market-cases.md)：市场参考案例与建议
+- [`docs/18-diy-superapp-case.md`](18-diy-superapp-case.md)：DIY 超级 APP 案例
 
 ### 社区成员（参与与共建）
 - [`docs/06-contribution.md`](06-contribution.md)：参与方式与贡献路径
@@ -18,6 +20,9 @@
 - [`docs/07-roadmap.md`](07-roadmap.md)：路线图
 - [`docs/11-economics.md`](11-economics.md)：经济模型（权益体系）
 - [`docs/14-member-handbook.md`](14-member-handbook.md)：成员手册（协作版）
+- [`docs/16-roles.md`](16-roles.md)：角色体系与协作分工
+- `docs/templates/roles/`：角色 Prompt 模板
+- `docs/templates/roles/*.output.md`：角色输出模板
 
 ### 开发者/项目方（接入与落地）
 - [`docs/03-architecture.md`](03-architecture.md)：技术路线与分层架构
