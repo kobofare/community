@@ -25,6 +25,9 @@
 - [`docs/16-roles.md`](docs/16-roles.md)：角色体系与协作分工
 - [`docs/17-market-cases.md`](docs/17-market-cases.md)：市场参考案例与建议
 - [`docs/18-diy-superapp-case.md`](docs/18-diy-superapp-case.md)：DIY 超级 APP 案例
+- [`docs/19-dev-guide.md`](docs/19-dev-guide.md)：开发规范与流程（参考版）
+- [`docs/20-cloud-assets.md`](docs/20-cloud-assets.md)：云资源与资产管理（参考版）
+- [`docs/21-dao-direction.md`](docs/21-dao-direction.md)：DAO 方向与治理路线（草案）
 - [`docs/99-doc-gaps.md`](docs/99-doc-gaps.md)：文档补充清单
 
 ## 参与共建

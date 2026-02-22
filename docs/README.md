@@ -21,8 +21,11 @@
 - [`docs/11-economics.md`](11-economics.md)：经济模型（权益体系）
 - [`docs/14-member-handbook.md`](14-member-handbook.md)：成员手册（协作版）
 - [`docs/16-roles.md`](16-roles.md)：角色体系与协作分工
-- `docs/templates/roles/`：角色 Prompt 模板
-- `docs/templates/roles/*.output.md`：角色输出模板
+- [`docs/19-dev-guide.md`](19-dev-guide.md)：开发规范与流程（参考版）
+- [`docs/20-cloud-assets.md`](20-cloud-assets.md)：云资源与资产管理（参考版）
+- [`docs/21-dao-direction.md`](21-dao-direction.md)：DAO 方向与治理路线（草案）
+- [`docs/templates/roles/`](templates/roles/)：角色 Prompt 模板
+- [`docs/templates/roles/*.output.md`](templates/roles/)：角色输出模板
 
 ### 开发者/项目方（接入与落地）
 - [`docs/03-architecture.md`](03-architecture.md)：技术路线与分层架构
@@ -35,6 +38,9 @@
 - 路线与治理：`05`/`07`
 - 产品与技术：`03`/`04`/`12`
 - 经济与激励：`11`
+- 开发规范：`19`
+- 云资源与资产：`20`
+- DAO 路线：`21`
 
 ## 贡献文档
 - 建议在 PR 中说明更新内容与影响范围
